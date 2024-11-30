@@ -1,0 +1,10 @@
+{% extends 'store/layout/main.html' %}
+{% block content %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<div class="order-confirm" style="justify-content: center; margin: 100px; padding-bottom: 30px;">
+    <h3 style="padding-bottom: 30px;">Order Confirm Succesfully</h3>
+    <a href=" {% url 'shop' %} " class="buy-now" >Shop More</a>
+</div>
+
+{% endblock %}

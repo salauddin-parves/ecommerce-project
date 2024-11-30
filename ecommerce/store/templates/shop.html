@@ -1,0 +1,20 @@
+{% extends 'store/layout/main.html' %}
+
+{% block content %}
+<div class="shop">
+  <h1>ALL PRODUCTS</h1>
+</div>
+
+<div class="product-container">
+  {% for product in products %}
+    <div class="product-card">
+      <a href="{% url 'productview' product_title=product.product_title %}">
+        <img src="{{ product.products_image.url }}" alt="{{ product.product_title }}" class="product-image" />
+        <h2 class="product-name">{{ product.product_title }}</h2>
+        <p class="product-price">${{ product.sale_price }}</p>
+      </a>
+      <a href="{% url 'checkout' product_title=product.product_title %}" class="buy-now">BUY NOW</a>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

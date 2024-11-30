@@ -1,0 +1,39 @@
+{% extends 'store/layout/main.html' %}
+{% block title %}
+  Contact
+{% endblock %}
+{% block content %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+  <div class="contact-info">
+    <h1>Contact Us</h1>
+    <p>
+      <strong>Email:</strong> support@sneakpeek.com
+    </p>
+    <p>
+      <strong>Phone:</strong> +1 234 567 890
+    </p>
+    <p>
+      <strong>Address:</strong> 123 Your Street, Bangladesh, Bangladesh
+    </p>
+  </div>
+
+  <div class="contact-container">
+    <p>We'd love to hear from you! Please fill out the form below to get in touch.</p>
+
+    <form action="#" method="POST" class="contact-form">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" placeholder="Enter the subject" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Enter your message here" required></textarea>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+{% endblock %}
